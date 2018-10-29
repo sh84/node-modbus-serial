@@ -4,6 +4,8 @@ declare class ModbusRTU {
   open(callback: Function): void;
   close(callback: Function): void;
 
+  isOpen: boolean;
+
   writeFC1(address: number, dataAddress: number, length: number, next: ModbusRTU.NodeStyleCallback<ModbusRTU.ReadCoilResult>): void;
   writeFC2(address: number, dataAddress: number, length: number, next: ModbusRTU.NodeStyleCallback<ModbusRTU.ReadCoilResult>): void;
   writeFC3(address: number, dataAddress: number, length: number, next: ModbusRTU.NodeStyleCallback<ModbusRTU.ReadRegisterResult>): void;
